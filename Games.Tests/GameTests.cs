@@ -18,7 +18,7 @@ namespace Games.Tests
             Title = "Uncharted",
             ReleaseDate = new DateTime(2007, 11, 19),
             Genre = "action-adventure",
-            Price = 59.99
+            Price = 59.99M
             }
         };
         /*
