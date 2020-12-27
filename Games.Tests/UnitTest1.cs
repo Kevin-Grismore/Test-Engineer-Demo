@@ -9,30 +9,56 @@ namespace Games.Tests
         [SetUp]
         public void Setup()
         {
+
         }
 
+        static Game[] games = {
+            new Game {
+            ID = 1,
+            Title = "Uncharted",
+            ReleaseDate = new DateTime(2007, 11, 19),
+            Genre = "action-adventure",
+            Price = 59.99
+            }
+        };
         /*
         *   1. Given a Game is created
         *   2. When the game object has valid data
         *   3. Then the data in the object matches the input
         */
         [Test]
-        public void CreateGame_WithCorrectData()
+        [TestCaseSource("games")]
+        public void VerifyGameID(Game game)
         {
-            Game uncharted = new Game {
-                ID = 1,
-                Title = "Uncharted",
-                ReleaseDate = new DateTime(2007, 11, 19),
-                Genre = "action",
-                Price = 59.99
-            };
+            Assert.That(game.ID, Is.EqualTo(1));
+        }
 
+        [Test]
+        [TestCaseSource("games")]
+        public void VerifyGameTitle(Game game)
+        {
+            Assert.That(game.Title, Is.EqualTo("Uncharted"));
+        }
 
-            Assert.That(uncharted.ID, Is.EqualTo(1));
-            Assert.That(uncharted.Title, Is.EqualTo("Uncharted"));
-            Assert.That(uncharted.ReleaseDate, Is.EqualTo(new DateTime(2007, 11, 19)));
-            Assert.That(uncharted.Genre, Is.EqualTo("action-adventure"));
-            Assert.That(uncharted.Price, Is.EqualTo(59.99));
+        [Test]
+        [TestCaseSource("games")]
+        public void VerifyGameReleaseDate(Game game)
+        {
+            Assert.That(game.ReleaseDate, Is.EqualTo(new DateTime(2007, 11, 19)));
+        }
+
+        [Test]
+        [TestCaseSource("games")]
+        public void VerifyGameGenre(Game game)
+        {
+            Assert.That(game.Genre, Is.EqualTo("action-adventure"));
+        }
+
+        [Test]
+        [TestCaseSource("games")]
+        public void VerifyGamePrice(Game game)
+        {
+            Assert.That(game.Price, Is.EqualTo(59.99));
         }
     }
 }
