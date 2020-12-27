@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesGame.Data;
 using RazorPagesGame.Models;
 
-namespace RazorPagesGame.PagesGames
+namespace RazorPagesGame.Pages.Games
 {
     public class IndexModel : PageModel
     {
