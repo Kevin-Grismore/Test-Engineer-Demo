@@ -1225,6 +1225,42 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Framework.dll": {}
+        }
+      },
+      "Games/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Games.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Games.dll": {}
+        }
+      },
+      "RazorPagesGame/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RazorPagesGame.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorPagesGame.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4569,13 +4605,30 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Framework/1.0.0": {
+      "type": "project",
+      "path": "../Framework/Framework.csproj",
+      "msbuildProject": "../Framework/Framework.csproj"
+    },
+    "Games/1.0.0": {
+      "type": "project",
+      "path": "../Games/Games.csproj",
+      "msbuildProject": "../Games/Games.csproj"
+    },
+    "RazorPagesGame/1.0.0": {
+      "type": "project",
+      "path": "../RazorPagesGame/RazorPagesGame.csproj",
+      "msbuildProject": "../RazorPagesGame/RazorPagesGame.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Games >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
-      "NUnit3TestAdapter >= 3.16.1"
+      "NUnit3TestAdapter >= 3.16.1",
+      "RazorPagesGame >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4585,11 +4638,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
+      "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
       "projectName": "Games.Tests",
-      "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
+      "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\obj\\",
+      "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4608,7 +4661,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {
+              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj"
+            },
+            "e:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
+              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

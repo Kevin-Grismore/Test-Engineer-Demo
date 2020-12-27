@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Framework.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Framework/1.0.0": {
+      "type": "project",
+      "path": "../Framework/Framework.csproj",
+      "msbuildProject": "../Framework/Framework.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Framework >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\kevin\\.nuget\\packages\\": {},
@@ -14,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
+      "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
       "projectName": "Games",
-      "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
+      "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\obj\\",
+      "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -37,7 +56,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
+              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

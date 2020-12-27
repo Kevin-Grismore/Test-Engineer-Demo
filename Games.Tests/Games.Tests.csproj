@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Games\Games.csproj" />
+    <ProjectReference Include="..\RazorPagesGame\RazorPagesGame.csproj" />
   </ItemGroup>
 
 </Project>
