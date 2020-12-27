@@ -4,7 +4,7 @@ using System;
 
 namespace Games.Tests
 {
-    public class Tests
+    public class GameTests
     {
         [SetUp]
         public void Setup()
