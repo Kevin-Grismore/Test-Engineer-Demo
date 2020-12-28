@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
+      "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
       "projectName": "Games",
-      "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
+      "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\obj\\",
+      "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -57,8 +57,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
-              "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj"
+            "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
+              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj"
             }
           }
         }

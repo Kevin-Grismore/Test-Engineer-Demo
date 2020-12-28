@@ -8894,11 +8894,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
+      "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
       "projectName": "Games.Tests",
-      "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
+      "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\Games.Tests.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\obj\\",
+      "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8918,11 +8918,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {
-              "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj"
+            "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {
+              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj"
             },
-            "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
-              "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj"
+            "e:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
+              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj"
             }
           }
         }
