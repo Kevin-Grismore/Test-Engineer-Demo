@@ -25,6 +25,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Game[0].ID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Game[0].Title)
             </th>
             <th>
@@ -45,19 +48,22 @@
     <tbody>
 @foreach (var item in Model.Game) {
         <tr>
-            <td>
+            <td id="@item.ID">
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td id="@item.Title">
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
+            <td id="@item.ReleaseDate">
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
-            <td>
+            <td id="@item.Genre">
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
-            <td>
+            <td id="@item.Price">
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
+            <td id="@item.Rating">
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>

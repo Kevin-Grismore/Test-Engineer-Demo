@@ -229,3 +229,5 @@ E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\runtimes\win
 E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\RazorPagesGame.dll
 E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\RazorPagesGame.pdb
+E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\WebDriver.Support.dll
+E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\WebDriver.dll
