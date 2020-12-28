@@ -26,10 +26,40 @@ namespace RazorPagesGame.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
-        //Regex match: Starts with at least one capital letter, ends with 0 more letters, nubmers, quotes, or white space
-        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
+        //Regex match: EC, E, E10+, T, M, or A
+        [RegularExpression(@"[EC|E|E10+|T|M|A]")]
         [StringLength(5)]
         [Required]
         public string Rating { get; set; }
+
+        public bool CanBePlayedAtAge(int age)
+        {
+            if (Rating == "EC" || Rating == "E")
+            {
+                return true;
+            }
+
+            if (Rating == "E10+" && age >= 10)
+            {
+                return true;
+            }
+
+            if (Rating == "T" && age >= 13)
+            {
+                return true;
+            }
+
+            if (Rating == "M" && age >= 17)
+            {
+                return true;
+            }
+
+            if(Rating == "A" && age >= 18)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
