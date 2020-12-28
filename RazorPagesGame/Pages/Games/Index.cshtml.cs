@@ -51,5 +51,5 @@ namespace RazorPagesGame.Pages.Games
             Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
             Game = await games.ToListAsync();
         }
-            }
+    }
 }

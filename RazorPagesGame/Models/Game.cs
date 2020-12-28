@@ -27,7 +27,7 @@ namespace RazorPagesGame.Models
         public decimal Price { get; set; }
 
         //Regex match: EC, E, E10+, T, M, or A
-        [RegularExpression(@"[EC|E|E10+|T|M|A]")]
+        [RegularExpression(@"^(EC|E|E10+|T|M|A)$")]
         [StringLength(5)]
         [Required]
         public string Rating { get; set; }
