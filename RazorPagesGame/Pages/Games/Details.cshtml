@@ -44,6 +44,21 @@
     </dl>
 </div>
 <div>
+    <form>
+        <p>Can I play this game? </p>
+        <p>Age:
+            <input type="text" asp-for="AgeString"/>
+            <input type="submit" value="Check" class="btn btn-primary"/>
+            <span asp-validation-for="@Model.AgeString" class="text-danger"></span>
+        </p>
+    </form>
+</div>
+<div>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CanPlay)
+        </dd>
+</div>
+<div>
     <a asp-page="./Edit" asp-route-id="@Model.Game.ID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,13 @@ namespace RazorPagesGame.Pages.Games
 
         public Game Game { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        [RegularExpression(@"^[0-9]+$")]
+        [Required]
+        public string AgeString { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string CanPlay { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -34,6 +42,25 @@ namespace RazorPagesGame.Pages.Games
             {
                 return NotFound();
             }
+
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            if (!string.IsNullOrEmpty(AgeString))
+            {
+                if(Game.CanBePlayedAtAge(Int32.Parse(AgeString)))
+                {
+                    CanPlay = "Yes";
+                }
+
+                else
+                {
+                    CanPlay = "No";
+                }
+            }
+
             return Page();
         }
     }
