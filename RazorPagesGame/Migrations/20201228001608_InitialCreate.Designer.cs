@@ -9,7 +9,7 @@ using RazorPagesGame.Data;
 namespace RazorPagesGame.Migrations
 {
     [DbContext(typeof(RazorPagesGameContext))]
-    [Migration("20201227222345_InitialCreate")]
+    [Migration("20201228001608_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,8 +27,11 @@ namespace RazorPagesGame.Migrations
                     b.Property<string>("Genre")
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("REAL");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Rating")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("TEXT");
