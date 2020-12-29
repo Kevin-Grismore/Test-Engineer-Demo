@@ -13,9 +13,9 @@ namespace Games.UITests
         {
             var co = new ChromeOptions();
             co.AddArgument("headless");
+            co.AddArgument("no-sandbox");
             co.AcceptInsecureCertificates = true;
             co.PageLoadStrategy = PageLoadStrategy.Normal;
-            co.AddArgument("no-sandbox");
             driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), co);
         }
 
@@ -25,8 +25,17 @@ namespace Games.UITests
         public void UnchartedIsOnGamesPage()
         {
             driver.Url = "https://localhost:5001/games";
-            var uncharted = driver.FindElement(By.CssSelector("a[class='navbar-brand']"));
+            var uncharted = driver.FindElement(By.CssSelector("td[id='Uncharted']"));
             Assert.That(uncharted.Displayed);
+        }
+
+        [Test]
+        public void UnchartedIsRatedT()
+        {
+            driver.Url = "https://localhost:5001/games";
+            driver.FindElement(By.CssSelector("a[href*='Details/1']")).Click();
+            var unchartedRating = driver.FindElement(By.CssSelector("dd[id='rating-desc']")).Text;
+            Assert.That(unchartedRating, Is.EqualTo("T"));
         }
 
         [TearDown]
