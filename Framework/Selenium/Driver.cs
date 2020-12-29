@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -29,6 +30,16 @@ namespace Framework.Selenium
         public static void Quit()
         {
             Current.Quit();
+        }
+
+        public static IWebElement FindElement(By by)
+        {
+            return Current.FindElement(by);
+        }
+
+        public static IList<IWebElement> FindElements(By by)
+        {
+            return Current.FindElements(by);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Games.UITests
         {
             Driver.Init();
             AllPages.Init();
-            Driver.Current.Url = "https://localhost:5001/";
+            Driver.GoTo("https://localhost:5001/");
         }
 
         // 1. Go to Games page
