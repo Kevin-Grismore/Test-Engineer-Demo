@@ -4,23 +4,17 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Framework.Services;
+using Framework.Selenium;
 
 namespace Games.UITests
 {
     public class GameUITests
     {
-        IWebDriver driver;
-
         [SetUp]
         public void Setup()
         {
-            var co = new ChromeOptions();
-            co.AddArgument("headless");
-            co.AddArgument("no-sandbox");
-            co.AcceptInsecureCertificates = true;
-            co.PageLoadStrategy = PageLoadStrategy.Normal;
-            driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), co);
-            driver.Url = "https://localhost:5001/";
+            Driver.Init();
+            Driver.Current.Url = "https://localhost:5001/";
         }
 
         // 1. Go to Games page
@@ -28,7 +22,7 @@ namespace Games.UITests
         [Test]
         public void UnchartedIsOnGamesPage()
         {
-            var gamesPage = new GamesPage(driver);
+            var gamesPage = new GamesPage(Driver.Current);
             gamesPage.GoTo();
             IWebElement uncharted = gamesPage.GameDetailsByName("Uncharted");
             Assert.That(uncharted.Displayed);
@@ -44,8 +38,8 @@ namespace Games.UITests
         //[Parallelizable(ParallelScope.Children)]
         public void GameRatingOnPage_MatchesDefinitionInModel(string gameName)
         {
-            new GamesPage(driver).GoTo().GameDetailsByName(gameName).Click();
-            var gameDetails = new GameDetailsPage(driver);
+            new GamesPage(Driver.Current).GoTo().GameDetailsByName(gameName).Click();
+            var gameDetails = new GameDetailsPage(Driver.Current);
 
             var game = gameDetails.GetBaseGame();
             var uncharted2 = new InMemoryGameService().GetGameByName(gameName);
@@ -56,7 +50,7 @@ namespace Games.UITests
         [TearDown]
         public void TearDown()
         {
-            driver.Quit();
+            Driver.Current.Quit();
         }
     }
 }
