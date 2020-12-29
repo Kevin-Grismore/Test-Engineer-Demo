@@ -5,7 +5,7 @@ using System;
 namespace Games.UnitTests
 {
     [TestFixture]
-    public class GameTests
+    public class GameUnitTests
     {
         static Game[] games = {
             new Game {

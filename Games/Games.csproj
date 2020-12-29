@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj" />
+    <ProjectReference Include="..\Games.UITests\Games.UITests.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

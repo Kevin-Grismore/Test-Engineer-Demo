@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace Games.UITests
 {
-    public class GameTests
+    public class GameUITests
     {
         IWebDriver driver;
         [SetUp]
