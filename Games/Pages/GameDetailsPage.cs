@@ -1,3 +1,5 @@
+using System;
+using Framework.Models;
 using OpenQA.Selenium;
 
 namespace Games.Pages
@@ -11,29 +13,16 @@ namespace Games.Pages
             map = new GameDetailsPageMap(driver);
         }
 
-        public string GetGameTitle()
+        public Game GetBaseGame()
         {
-            return map.GameTitle.Text;
-        }
-
-        public string GetGameReleaseDate()
-        {
-            return map.GameReleaseDate.Text;
-        }
-
-        public string GetGameGenre()
-        {
-            return map.GameGenre.Text;
-        }
-
-        public string GetGamePrice()
-        {
-            return map.GamePrice.Text;
-        }
-
-        public string GetGameRating()
-        {
-            return map.GameRating.Text;
+            return new Game
+            {
+                Title = map.GameTitle.Text,
+                ReleaseDate = DateTime.Parse(map.GameReleaseDate.Text),
+                Genre = map.GameGenre.Text,
+                Price = Convert.ToDecimal(map.GamePrice.Text.Substring(1)),
+                Rating = map.GameRating.Text
+            };
         }
 
         public void EnterAge(int age)
