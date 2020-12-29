@@ -11,7 +11,12 @@ namespace Games.UITests
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
+            var co = new ChromeOptions();
+            co.AddArgument("headless");
+            co.AcceptInsecureCertificates = true;
+            co.PageLoadStrategy = PageLoadStrategy.Normal;
+            co.AddArgument("no-sandbox");
+            driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), co);
         }
 
         // 1. Go to Games page
