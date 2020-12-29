@@ -41,10 +41,10 @@ namespace Games.UITests
             new GamesPage(Driver.Current).GoTo().GameDetailsByName(gameName).Click();
             var gameDetails = new GameDetailsPage(Driver.Current);
 
-            var game = gameDetails.GetBaseGame();
-            var uncharted2 = new InMemoryGameService().GetGameByName(gameName);
+            var gameOnPage = gameDetails.GetBaseGame();
+            var gameDefinition = new InMemoryGameService().GetGameByName(gameName);
             
-            Assert.That(game.Genre, Is.EqualTo(uncharted2.Genre));
+            Assert.That(gameOnPage.Genre, Is.EqualTo(gameDefinition.Genre));
         }
 
         [TearDown]

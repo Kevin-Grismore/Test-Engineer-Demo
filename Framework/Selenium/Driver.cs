@@ -14,8 +14,8 @@ namespace Framework.Selenium
             var co = new ChromeOptions();
             co.AddArgument("headless");
             co.AddArgument("no-sandbox");
-            //co.AcceptInsecureCertificates = true;
-            //co.PageLoadStrategy = PageLoadStrategy.Normal;
+            co.AcceptInsecureCertificates = true;
+            co.PageLoadStrategy = PageLoadStrategy.Normal;
             _driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), co);
         }
 
