@@ -2,13 +2,19 @@ using OpenQA.Selenium;
 
 namespace Games.Pages
 {
-    public class GamesPage
+    public class GamesPage : PageBase
     {
         public readonly GamesPageMap map;
 
-        public GamesPage(IWebDriver driver)
+        public GamesPage(IWebDriver driver) : base(driver)
         {
             map = new GamesPageMap(driver);
+        }
+
+        public GamesPage GoTo()
+        {
+            headerNav.GoToGamesPage();
+            return this;
         }
 
         public void GoToCreatePage()
@@ -16,6 +22,20 @@ namespace Games.Pages
             map.CreateNewGameLink.Click();
         }
 
+        public void GameEditById(int id)
+        {
+            map.GameEditLink(id);
+        }
+
+        public void GameDetailsById(int id)
+        {
+            map.GameDetailsLink(id);
+        }
+
+        public void GameDeleteById(int id)
+        {
+            map.GameDeleteLink(id);
+        }
     }
 
     public class GamesPageMap
