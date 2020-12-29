@@ -8924,11 +8924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj",
+      "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj",
       "projectName": "Games.UITests",
-      "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj",
+      "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\obj\\",
+      "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8948,8 +8948,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "e:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
-              "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj"
+            "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
+              "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj"
             }
           }
         }
