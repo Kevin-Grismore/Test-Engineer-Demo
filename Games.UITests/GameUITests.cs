@@ -1,4 +1,5 @@
 using System.IO;
+using Games.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -17,6 +18,7 @@ namespace Games.UITests
             co.AcceptInsecureCertificates = true;
             co.PageLoadStrategy = PageLoadStrategy.Normal;
             driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), co);
+            driver.Url = "https://localhost:5001/";
         }
 
         // 1. Go to Games page
@@ -24,18 +26,22 @@ namespace Games.UITests
         [Test]
         public void UnchartedIsOnGamesPage()
         {
-            driver.Url = "https://localhost:5001/games";
-            var uncharted = driver.FindElement(By.CssSelector("td[id='Uncharted']"));
+            var gamesPage = new GamesPage(driver);
+            gamesPage.GoTo();
+            IWebElement uncharted = gamesPage.GameDetailsByName("Uncharted");
             Assert.That(uncharted.Displayed);
         }
 
+        // 1. Go to Games page
+        // 2. Click the Details link for Uncharted
+        // 3. Assert that Uncharted's rating is T
         [Test]
         public void UnchartedIsRatedT()
         {
-            driver.Url = "https://localhost:5001/games";
-            driver.FindElement(By.CssSelector("a[href*='Details/1']")).Click();
-            var unchartedRating = driver.FindElement(By.CssSelector("dd[id='rating-desc']")).Text;
-            Assert.That(unchartedRating, Is.EqualTo("T"));
+            new GamesPage(driver).GoTo().GameDetailsByName("Uncharted").Click();
+            var gameDetails = new GameDetailsPage(driver);
+            var rating = gameDetails.GetGameRating();
+            Assert.That(rating, Is.EqualTo("T"));
         }
 
         [TearDown]

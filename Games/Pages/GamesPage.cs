@@ -22,19 +22,19 @@ namespace Games.Pages
             map.CreateNewGameLink.Click();
         }
 
-        public void GameEditById(int id)
+        public IWebElement GameEditByName(string name)
         {
-            map.GameEditLink(id);
+            return map.GameEditLink(name);
         }
 
-        public void GameDetailsById(int id)
+        public IWebElement GameDetailsByName(string name)
         {
-            map.GameDetailsLink(id);
+            return map.GameDetailsLink(name);
         }
 
-        public void GameDeleteById(int id)
+        public IWebElement GameDeleteByName(string name)
         {
-            map.GameDeleteLink(id);
+            return map.GameDeleteLink(name);
         }
     }
 
@@ -53,8 +53,8 @@ namespace Games.Pages
         public IWebElement SearchInput => _driver.FindElement(By.CssSelector("input[id='SearchString']"));
         public IWebElement FilterButton => _driver.FindElement(By.CssSelector("input[value='Filter']"));
 
-        public IWebElement GameEditLink(int id) => _driver.FindElement(By.CssSelector($"a[href*='Edit/{id}']"));
-        public IWebElement GameDetailsLink(int id) => _driver.FindElement(By.CssSelector($"a[href*='Details/{id}']"));
-        public IWebElement GameDeleteLink(int id) => _driver.FindElement(By.CssSelector($"a[href*='Delete/{id}']"));
+        public IWebElement GameEditLink(string name) => _driver.FindElement(By.CssSelector($"a[id='Edit {name}']"));
+        public IWebElement GameDetailsLink(string name) => _driver.FindElement(By.CssSelector($"a[id='Details {name}']"));
+        public IWebElement GameDeleteLink(string name) => _driver.FindElement(By.CssSelector($"a[id='Delete {name}']"));
     }
 }

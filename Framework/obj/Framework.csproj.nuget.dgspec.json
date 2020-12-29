@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {}
+    "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {}
   },
   "projects": {
-    "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
+    "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
+        "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
         "projectName": "Framework",
-        "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
+        "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\obj\\",
+        "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

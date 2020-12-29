@@ -231,3 +231,7 @@ E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\RazorPagesGa
 E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\RazorPagesGame.pdb
 E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\WebDriver.Support.dll
 E:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\WebDriver.dll
+e:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\Framework.dll
+e:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\Games.dll
+e:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\Games.pdb
+e:\NUnit Projects\Test Engineer Demo\Games.UITests\bin\Debug\net5.0\Framework.pdb

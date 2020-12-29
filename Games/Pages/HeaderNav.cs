@@ -34,8 +34,9 @@ namespace Games.Pages
 
         public HeaderNavMap(IWebDriver driver)
         {
-            driver = _driver;
+            _driver = driver;
         }
+
         public IWebElement HomePageLink => _driver.FindElement(By.CssSelector("a[class='navbar-brand']"));
         public IWebElement GamesPageLink => _driver.FindElement(By.CssSelector("a[href='/Games']"));
         public IWebElement PrivacyPageLink => _driver.FindElement(By.CssSelector("a[href='/Privacy']"));

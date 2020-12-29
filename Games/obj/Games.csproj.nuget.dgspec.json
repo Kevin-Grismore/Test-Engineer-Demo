@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {}
+    "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {}
   },
   "projects": {
-    "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
+    "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
+        "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
         "projectName": "Framework",
-        "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
+        "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\obj\\",
+        "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,80 +42,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj",
-        "projectName": "Games.UITests",
-        "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
-                "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[16.5.0, )"
-            },
-            "NUnit": {
-              "target": "Package",
-              "version": "[3.12.0, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[3.16.1, )"
-            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[3.141.0, )"
@@ -144,14 +71,14 @@
         }
       }
     },
-    "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {
+    "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
+        "projectUniqueName": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
         "projectName": "Games",
-        "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
+        "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\Games.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games\\obj\\",
+        "outputPath": "e:\\NUnit Projects\\Test Engineer Demo\\Games\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -171,11 +98,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj"
-              },
-              "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj": {
-                "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\Games.UITests\\Games.UITests.csproj"
+              "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj": {
+                "projectPath": "e:\\NUnit Projects\\Test Engineer Demo\\Framework\\Framework.csproj"
               }
             }
           }
@@ -200,94 +124,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj",
-        "projectName": "RazorPagesGame",
-        "projectPath": "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\RazorPagesGame.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "E:\\NUnit Projects\\Test Engineer Demo\\RazorPagesGame\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SQLite": {
-              "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[5.0.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

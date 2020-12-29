@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "Games.UITests/1.0.0": {
         "dependencies": {
+          "Framework": "1.0.0",
+          "Games": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.16.1",
@@ -1980,6 +1982,23 @@
           }
         }
       },
+      "Framework/1.0.0": {
+        "dependencies": {
+          "Selenium.Support": "3.141.0",
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "runtime": {
+          "Framework.dll": {}
+        }
+      },
+      "Games/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "Games.dll": {}
+        }
+      },
       "RazorPagesGame/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.1",
@@ -3070,6 +3089,16 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Games/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "RazorPagesGame/1.0.0": {
       "type": "project",
