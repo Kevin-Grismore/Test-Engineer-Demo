@@ -11,7 +11,7 @@ namespace Games.UITests
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
+            driver = new ChromeDriver(Path.GetFullPath(@"E:\NUnit Projects\Test Engineer Demo\" + "_drivers"));
         }
 
         // 1. Go to Games page
