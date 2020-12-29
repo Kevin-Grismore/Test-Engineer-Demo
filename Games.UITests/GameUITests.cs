@@ -15,10 +15,10 @@ namespace Games.UITests
         public void Setup()
         {
             var co = new ChromeOptions();
-            //co.AddArgument("headless");
-            //co.AddArgument("no-sandbox");
-            //co.AcceptInsecureCertificates = true;
-            //co.PageLoadStrategy = PageLoadStrategy.Normal;
+            co.AddArgument("headless");
+            co.AddArgument("no-sandbox");
+            co.AcceptInsecureCertificates = true;
+            co.PageLoadStrategy = PageLoadStrategy.Normal;
             driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), co);
             driver.Url = "https://localhost:5001/";
         }
