@@ -1,4 +1,5 @@
 ﻿using System;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Games.Pages
@@ -7,9 +8,9 @@ namespace Games.Pages
     {
         public readonly HeaderNavMap map;
 
-        public HeaderNav(IWebDriver driver)
+        public HeaderNav()
         {
-            map = new HeaderNavMap(driver);
+            map = new HeaderNavMap();
         }
 
         public void GoToHomePage()
@@ -30,15 +31,8 @@ namespace Games.Pages
 
     public class HeaderNavMap
     {
-        IWebDriver _driver;
-
-        public HeaderNavMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-
-        public IWebElement HomePageLink => _driver.FindElement(By.CssSelector("a[class='navbar-brand']"));
-        public IWebElement GamesPageLink => _driver.FindElement(By.CssSelector("a[href='/Games']"));
-        public IWebElement PrivacyPageLink => _driver.FindElement(By.CssSelector("a[href='/Privacy']"));
+        public IWebElement HomePageLink => Driver.FindElement(By.CssSelector("a[class='navbar-brand']"));
+        public IWebElement GamesPageLink => Driver.FindElement(By.CssSelector("a[href='/Games']"));
+        public IWebElement PrivacyPageLink => Driver.FindElement(By.CssSelector("a[href='/Privacy']"));
     }
 }

@@ -13,8 +13,8 @@ namespace Games.Pages
 
         public static void Init()
         {
-            Games = new GamesPage(Driver.Current);
-            GameDetails = new GameDetailsPage(Driver.Current);
+            Games = new GamesPage();
+            GameDetails = new GameDetailsPage();
         }
     }
 

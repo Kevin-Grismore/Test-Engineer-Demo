@@ -48,7 +48,7 @@ namespace Games.UITests
         [TearDown]
         public void TearDown()
         {
-            Driver.Current.Quit();
+            Driver.Quit();
         }
     }
 }

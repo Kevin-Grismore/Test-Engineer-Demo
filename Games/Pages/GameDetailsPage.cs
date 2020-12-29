@@ -1,5 +1,6 @@
 using System;
 using Framework.Models;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Games.Pages
@@ -8,9 +9,9 @@ namespace Games.Pages
     {
         public readonly GameDetailsPageMap map;
 
-        public GameDetailsPage(IWebDriver driver) : base(driver)
+        public GameDetailsPage()
         {
-            map = new GameDetailsPageMap(driver);
+            map = new GameDetailsPageMap();
         }
 
         public Game GetBaseGame()
@@ -48,23 +49,16 @@ namespace Games.Pages
 
     public class GameDetailsPageMap
     {
-        IWebDriver _driver;
-        
-        public GameDetailsPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
+        public IWebElement GameTitle => Driver.FindElement(By.CssSelector("dd[id='title-desc']"));
+        public IWebElement GameReleaseDate => Driver.FindElement(By.CssSelector("dd[id='releasedate-desc']"));
+        public IWebElement GameGenre => Driver.FindElement(By.CssSelector("dd[id='genre-desc']"));
+        public IWebElement GamePrice => Driver.FindElement(By.CssSelector("dd[id='price-desc']"));
+        public IWebElement GameRating => Driver.FindElement(By.CssSelector("dd[id='rating-desc']"));
 
-        public IWebElement GameTitle => _driver.FindElement(By.CssSelector("dd[id='title-desc']"));
-        public IWebElement GameReleaseDate => _driver.FindElement(By.CssSelector("dd[id='releasedate-desc']"));
-        public IWebElement GameGenre => _driver.FindElement(By.CssSelector("dd[id='genre-desc']"));
-        public IWebElement GamePrice => _driver.FindElement(By.CssSelector("dd[id='price-desc']"));
-        public IWebElement GameRating => _driver.FindElement(By.CssSelector("dd[id='rating-desc']"));
+        public IWebElement AgeInput => Driver.FindElement(By.CssSelector("input[id='AgeString']"));
+        public IWebElement CheckAgeButton => Driver.FindElement(By.CssSelector("input[value='Check']"));
 
-        public IWebElement AgeInput => _driver.FindElement(By.CssSelector("input[id='AgeString']"));
-        public IWebElement CheckAgeButton => _driver.FindElement(By.CssSelector("input[value='Check']"));
-
-        public IWebElement EditGameLink => _driver.FindElement(By.CssSelector("a[href*='Edit']"));
-        public IWebElement BackToListLink => _driver.FindElement(By.CssSelector("a[id='back-to-list']"));
+        public IWebElement EditGameLink => Driver.FindElement(By.CssSelector("a[href*='Edit']"));
+        public IWebElement BackToListLink => Driver.FindElement(By.CssSelector("a[id='back-to-list']"));
     }
 }

@@ -1,3 +1,4 @@
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Games.Pages
@@ -6,9 +7,9 @@ namespace Games.Pages
     {
         public readonly GamesPageMap map;
 
-        public GamesPage(IWebDriver driver) : base(driver)
+        public GamesPage()
         {
-            map = new GamesPageMap(driver);
+            map = new GamesPageMap();
         }
 
         public GamesPage GoTo()
@@ -40,21 +41,14 @@ namespace Games.Pages
 
     public class GamesPageMap
     {
-        IWebDriver _driver;
+        public IWebElement CreateNewGameLink => Driver.FindElement(By.CssSelector("a[href='/Games/Create']"));
 
-        public GamesPageMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
+        public IWebElement GenreDropdown => Driver.FindElement(By.CssSelector("select[id='GameGenre']"));
+        public IWebElement SearchInput => Driver.FindElement(By.CssSelector("input[id='SearchString']"));
+        public IWebElement FilterButton => Driver.FindElement(By.CssSelector("input[value='Filter']"));
 
-        public IWebElement CreateNewGameLink => _driver.FindElement(By.CssSelector("a[href='/Games/Create']"));
-
-        public IWebElement GenreDropdown => _driver.FindElement(By.CssSelector("select[id='GameGenre']"));
-        public IWebElement SearchInput => _driver.FindElement(By.CssSelector("input[id='SearchString']"));
-        public IWebElement FilterButton => _driver.FindElement(By.CssSelector("input[value='Filter']"));
-
-        public IWebElement GameEditLink(string name) => _driver.FindElement(By.CssSelector($"a[id='Edit {name}']"));
-        public IWebElement GameDetailsLink(string name) => _driver.FindElement(By.CssSelector($"a[id='Details {name}']"));
-        public IWebElement GameDeleteLink(string name) => _driver.FindElement(By.CssSelector($"a[id='Delete {name}']"));
+        public IWebElement GameEditLink(string name) => Driver.FindElement(By.CssSelector($"a[id='Edit {name}']"));
+        public IWebElement GameDetailsLink(string name) => Driver.FindElement(By.CssSelector($"a[id='Details {name}']"));
+        public IWebElement GameDeleteLink(string name) => Driver.FindElement(By.CssSelector($"a[id='Delete {name}']"));
     }
 }
