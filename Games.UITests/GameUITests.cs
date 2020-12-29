@@ -35,7 +35,7 @@ namespace Games.UITests
         static string[] gameNames = { "Uncharted", "Uncharted 2" };
         [Test, Category("Games")]
         [TestCaseSource("gameNames")]
-        //[Parallelizable(ParallelScope.Children)]
+        [Parallelizable(ParallelScope.Children)]
         public void GameRatingOnPage_MatchesDefinitionInModel(string gameName)
         {
             new GamesPage(Driver.Current).GoTo().GameDetailsByName(gameName).Click();
