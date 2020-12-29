@@ -20,7 +20,7 @@ namespace Games.UITests
         public void UnchartedIsOnGamesPage()
         {
             driver.Url = "https://localhost:5001/games";
-            var uncharted = driver.FindElement(By.CssSelector("td[id='Uncharted']"));
+            var uncharted = driver.FindElement(By.CssSelector("a[class='navbar-brand']"));
             Assert.That(uncharted.Displayed);
         }
 
