@@ -14,6 +14,7 @@ namespace Games.UITests
         public void Setup()
         {
             Driver.Init();
+            AllPages.Init();
             Driver.Current.Url = "https://localhost:5001/";
         }
 
@@ -22,26 +23,23 @@ namespace Games.UITests
         [Test]
         public void UnchartedIsOnGamesPage()
         {
-            var gamesPage = new GamesPage(Driver.Current);
-            gamesPage.GoTo();
-            IWebElement uncharted = gamesPage.GameDetailsByName("Uncharted");
+            AllPages.Games.GoTo();
+            IWebElement uncharted = AllPages.Games.GameDetailsByName("Uncharted");
             Assert.That(uncharted.Displayed);
         }
 
         // 1. Go to Games page
         // 2. Click the Details link for a game
         // 3. Assert that the game's rating matches the expected rating
-
         static string[] gameNames = { "Uncharted", "Uncharted 2" };
         [Test, Category("Games")]
         [TestCaseSource("gameNames")]
         [Parallelizable(ParallelScope.Children)]
         public void GameRatingOnPage_MatchesDefinitionInModel(string gameName)
         {
-            new GamesPage(Driver.Current).GoTo().GameDetailsByName(gameName).Click();
-            var gameDetails = new GameDetailsPage(Driver.Current);
+            AllPages.Games.GoTo().GameDetailsByName(gameName).Click();
 
-            var gameOnPage = gameDetails.GetBaseGame();
+            var gameOnPage = AllPages.GameDetails.GetBaseGame();
             var gameDefinition = new InMemoryGameService().GetGameByName(gameName);
             
             Assert.That(gameOnPage.Genre, Is.EqualTo(gameDefinition.Genre));
