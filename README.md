@@ -10,7 +10,7 @@ An age checker on the Details page of each game to demonstrate ESRB rating enfor
 
 ### Framework
 #### Models
-Game definitions are stored in a local SQLite database. The Game model describes a basic Game object and its properties as it exists in the database. The virtual properties are overridden in specific Game models that inherit the base class to verify them against the pre-seeded database entries.
+Game definitions are stored in a local SQLite database. The Game model describes a basic Game object and its properties as it exists in the database. The virtual properties are overridden in specific Game definitions that inherit the base class to verify them against the pre-seeded database entries.
 
 #### Selenium
 The Selenium driver is wrapped for customizable functionality, including the ThreadStatic attribute for simple, parallelized use of the driver and its associated methods.
