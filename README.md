@@ -33,4 +33,4 @@ The rest of the pages inclue a page map class, which defines what elements are p
 
 ## TeamCity
 
-I've included the TeamCity project files to replicate the build steps, including code coverage.
+I've included the TeamCity project files to replicate the build steps if desired.
