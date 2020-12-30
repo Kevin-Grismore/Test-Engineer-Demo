@@ -20,7 +20,7 @@ Game definitions are stored in a local SQLite database. The Game model describes
 The Selenium driver is wrapped for customizable functionality, including the ```[ThreadStatic]``` attribute for simple, parallelized use of the driver and its associated methods.
 
 #### Services
-The ```IGameService``` interface requires any implementing service to offer the ability to retrieve a game's definition by name only. This is demonstrated in ```InMemoryGameService```, which serves instances of games by name.
+The ```IGameService``` interface requires any implementing service to offer the ability to retrieve a game's definition by name only. This is demonstrated in ```InMemoryGameService```, which serves instances of defined games by name.
 
 
 ## Games
@@ -29,4 +29,8 @@ This project contains page map models for each of the web pages that is tested i
 
 The rest of the pages inclue a page map class, which defines what elements are present on each page, and a page class, which defines what the user can do with those elements.
 
-AllPages encapsulates a ```[ThreadStatic]``` instance of each page so they may be tested in parallel alongside theThreadStatic Selenium driver.
+```AllPages``` encapsulates a ```[ThreadStatic]``` instance of each page so they may be tested in parallel alongside the Selenium driver.
+
+## TeamCity
+
+I've included the TeamCity project files to replicate the build steps, including code coverage.
