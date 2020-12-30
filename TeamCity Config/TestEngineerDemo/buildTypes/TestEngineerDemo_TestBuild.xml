@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="08d96dda-ad7b-462f-b2c6-87b865a63eb2" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Test Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="paths" value="GamesPage.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_4" name="Unit Tests with Code Coverage" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotNetCoverage.tool" value="dotcover" />
+          <param name="paths" value="Games.UnitTests/Games.UnitTests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_5" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="paths" value="Games.IntegrationTests/Games.IntegrationTests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_6" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="paths" value="Games.UITests/Games.UITests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="TestEngineerDemo_HttpsGithubComKevinGrismoreTestEngineerDemoRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="perCheckinTriggering" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+
