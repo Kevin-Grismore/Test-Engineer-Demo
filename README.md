@@ -1,6 +1,6 @@
 # Test Engineer Demo
 
-This is a sample project intended to demonstrate the use of NUnit and Selenium in C#. 
+This is a sample project intended to demonstrate the use of NUnit and Selenium in C#. It is a work in progress and I'll continue to add to it as I learn more about software testing.
 
 ### Build Requirements
 .NET Core 5.0 SDK https://dotnet.microsoft.com/download/dotnet/5.0
